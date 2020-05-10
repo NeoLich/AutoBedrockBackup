@@ -14,3 +14,8 @@ The script will check how many vbs scripts are running and will close itself if 
 It will then check if bedrock_server.exe is running 
   If it is it will give a 5 & 1 minute and  30 & 10-1 second warning before stoping the server, copying the files, and restartign the         server. 
 If it is not running it will copy the files and open the server. 
+
+
+I could not find a way to automate backups for my bedrock server that actualy worked so I decided to try and create one of my own
+I wrote this in vbs because when I was researching it appeared to be able to do what I needed.
+If you have any problems or if there is something you think I could change to make it better, pleae let me know and I will try to help if I can or change it if it needs changed.
