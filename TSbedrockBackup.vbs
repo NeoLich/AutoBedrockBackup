@@ -52,7 +52,7 @@ Function Multi 'checks how many vbs scripts are open and if more than more are o
 	
 End Function
 
-Function Copy 'copyies the world folder to the backup folder
+Function Copy 'copies the world folder to the backup folder
 	
 	If Check = 1 Then
 		Exit Function
@@ -149,7 +149,7 @@ Function FiveMinWar 'Sends a five minute warning to the players and then closes 
 		x.sendkeys t1 & q & t2 & q & t3 & q & t4 & q & t5 & q & t6 & " 1" & q & t7
 		wscript.sleep 1000
 		x.AppActivate"bedrock_server.exe"
-		x.sendkeys t1 & q & t2 & q & t3 & q & t4 & q & t5 & q & t6 & " Starting! Goodbuy!" & q & t7
+		x.sendkeys t1 & q & t2 & q & t3 & q & t4 & q & t5 & q & t6 & " Starting! Goodbye!" & q & t7
 		x.sendkeys "stop{ENTER}"
 		wscript.sleep 10000
 	End If
@@ -274,7 +274,7 @@ Function PFCreate 'asks for all locations and create backup.properties
 	
 	Set bfilec = FSO.CreateTextFile (strFile, true)
 	
-	bfilec.Write "# These are the locations of the diffrent files and folders that BedrockBackup.vbs uses (Example: C:\User\Server\File.exe)" & vbCrLf & vbCrLf & TempServerFile & vbCrLf & "#Path for the Bedrock Server file" & vbCrLf & vbCrLf & TempWorldLoc & vbCrLf & "#Path for the world directory for the server" & vbCrLf & vbCrLf & TempBackLoc & vbCrLf & "#Path for the Directory were the backups will be saved" & vbCrLf & vbCrLf & TempBTime & vbCrLf & "#This is the time the program will say it will backup. You must set up auto backups through Task Scheduler"
+	bfilec.Write "# These are the locations of the different files and folders that BedrockBackup.vbs uses (Example: C:\User\Server\File.exe)" & vbCrLf & vbCrLf & TempServerFile & vbCrLf & "#Path for the Bedrock Server file" & vbCrLf & vbCrLf & TempWorldLoc & vbCrLf & "#Path for the world directory for the server" & vbCrLf & vbCrLf & TempBackLoc & vbCrLf & "#Path for the Directory were the backups will be saved" & vbCrLf & vbCrLf & TempBTime & vbCrLf & "#This is the time the program will say it will backup. You must set up auto backups through Task Scheduler"
 	
 	If (FSO.folderExists(TempBackLoc)) Then
 		
@@ -295,7 +295,7 @@ Function PFCreate 'asks for all locations and create backup.properties
 	End If
 	
 	intAnswer = _
-		Msgbox("You have finished seting up BedrockBackup." & vbCrLf & "You can now automate the running of the program with Task Scheduler" & vbCrLf & "Do you wish to run BedrockBackup now?", _
+		Msgbox("You have finished setting up BedrockBackup." & vbCrLf & "You can now automate the running of the program with Task Scheduler" & vbCrLf & "Do you wish to run BedrockBackup now?", _
 			vbYesNo, "Finished Setup")
 	If intAnswer = vbYes Then
 		Exit Function
