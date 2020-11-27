@@ -2,7 +2,7 @@
 Script to help with automatic backups for bedrock servers.  Script will close the server copy the world files and then reopen the server.
 The script is written in vbs and create a properties file to store information about locations of folders and files
 
-This script is not fully automatic but instead can be ran with Task Schedular on Windows to automate the backup.
+This script is fully automatic all time of backup is set during initial launch of program.
 
 The vbs file should be installed in the same directory as your server.
 When first running the program you will be prompted to setup the script. 
